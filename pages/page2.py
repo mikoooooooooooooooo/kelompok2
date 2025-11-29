@@ -7,7 +7,7 @@ st.title("Visualisasi Data")
 
 #Generate some data
 x=np.linspace(0,10,100)
-y=np.sin(x)
+y=np.sin(2x)
 #Plot data
 fig, ax=plt.subplots()
 ax.plot(x,y)
