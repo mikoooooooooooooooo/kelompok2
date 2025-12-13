@@ -3,9 +3,9 @@ import streamlit as st
 st.title("Selamat Datang di Halaman Utama Kelompok 2")
 st.write("Ini tugas aplikasi streamlit prakbigdata.")
 
-st.tittle("Pendahuluan")
+st.subheader("Pendahuluan")
 
-st.markdown("
+st.markdown("""
 
     Investasi Asing Langsung (FDI) memainkan peran yang sangat penting dalam perekonomian negara berkembang, khususnya di kawasan Asia Tenggara. FDI tidak hanya memberikan kontribusi terhadap pembentukan modal tetap dan penciptaan lapangan pekerjaan, tetapi juga berperan dalam transfer teknologi, peningkatan keterampilan tenaga kerja, serta integrasi ekonomi global. Negara-negara ASEAN, termasuk Indonesia, Malaysia, Thailand, dan Vietnam, telah menjadi tujuan utama bagi investor asing karena potensi pasar yang besar, biaya tenaga kerja yang relatif lebih rendah, dan posisi geografis yang strategis di kawasan Asia. Namun, meskipun kawasan ini menawarkan berbagai peluang investasi, aliran FDI tetap dipengaruhi oleh berbagai faktor makroekonomi dan non-ekonomi.
     Beberapa faktor yang diketahui dapat memengaruhi FDI antara lain: Produk Domestik Bruto (GDP) per kapita, kurs mata uang lokal terhadap Dolar AS, inflasi, suku bunga deposito, ekspor, kestabilan politik, serta pengendalian korupsi. Faktor-faktor ini mencerminkan kondisi ekonomi, sosial, dan politik yang dapat meningkatkan atau menurunkan daya tarik suatu negara bagi investor asing. Oleh karena itu, penting untuk mengeksplorasi bagaimana faktor-faktor tersebut mempengaruhi aliran FDI di negara-negara ASEAN, khususnya Indonesia, Malaysia, Thailand, dan Vietnam pada periode 2004-2023. Penelitian ini bertujuan untuk memberikan gambaran yang lebih komprehensif tentang bagaimana berbagai faktor ini mempengaruhi FDI dan, pada gilirannya, pertumbuhan ekonomi di negara-negara tersebut.
@@ -43,4 +43,4 @@ COC	    = Pengendalian korupsi negara i pada waktu t.
 i		= Banyaknya observasi (cross section) yaitu empat Negara ASEAN
 t		= Banyaknya data time series (2004-2023)
 
-    ")
+    """)
