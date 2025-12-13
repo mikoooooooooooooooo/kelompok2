@@ -47,6 +47,7 @@ st.markdown("""
 
 st.markdown("""
     <div style="text-align: justify;">
+    
 1.	Variabel Dependen
 FDI (Foreign Direct Investment) yaitu pengukur aliran investasi asing langsung yang masuk ke negara. Data FDI yang digunakan adalah net inflows dalam satuan USD, yang diperoleh dari World Bank.
 
@@ -117,4 +118,6 @@ Dimana:
 
 <p>t		= Banyaknya data time series (2004-2023)
 
-    """)
+    </div>
+    """,unsafe_allow_html=True
+           )
