@@ -47,9 +47,9 @@ st.markdown("""
 
 st.markdown("""
     <div style="text-align: justify;">
-1.	**Variabel Dependen**
+1.	Variabel Dependen
 FDI (Foreign Direct Investment) yaitu pengukur aliran investasi asing langsung yang masuk ke negara. Data FDI yang digunakan adalah net inflows dalam satuan USD, yang diperoleh dari World Bank.
-2.	**Variabel Independen**
+2.	Variabel Independen
 GDP (Gross Domestic Product per Capita) yaitu ukuran total produksi barang dan jasa dalam suatu negara dibagi dengan jumlah penduduk. Satuan yang digunakan adalah USD. EXC (Exchange Rate) yaitu kurs mata uang lokal terhadap Dolar AS, dihitung dalam satuan LCU per USD (local currency units per US dollar). INF (Inflation) yaitu ingkat inflasi tahunan yang diukur dengan menggunakan inflasi harga konsumen dalam persentase (%). INT (Interest Rate) yaitu suku bunga deposito tahunan dalam persen (%). EKS (Exports) yaitu total ekspor barang dan jasa dalam satuan USD. POL (Political Stability) yaitu kestabilan politik dan tidak adanya kekerasan atau terorisme, diukur dengan menggunakan Political Stability and Absence of Violence/Terrorism dalam persenile rank. COC (Control of Corruption) yaitu tingkat pengendalian korupsi, diukur dengan Control of Corruption dalam persenile rank.
     </div>
     """,
@@ -68,7 +68,6 @@ Model regresi data panel yang digunakan dalam penelitian ini adalah sebagai beri
 ) 
 
 st.latex(r'''
-st.latex(r'''
 FDI_{it} = \alpha 
 + \beta_1 GDP_{it}
 + \beta_2 EXC_{it}
@@ -82,7 +81,7 @@ FDI_{it} = \alpha
 
 st.markdown("""
 <div style="text-align: justify;">
-**Dimana:**
+Dimana:
 
 <p>FDI 	= Investasi Asing Langsung di negara i pada waktu t.
 
