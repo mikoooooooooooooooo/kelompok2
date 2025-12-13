@@ -18,6 +18,4 @@ Nilai konstanta (C) dalam model regresi sebesar 1.843.361.056,20 mengindikasikan
 
 Variabel GDP per kapita memiliki koefisien sebesar 1,081,684.56 dan p-value sebesar 0.0275 (signifikan). Variabel kurs (EXC) memiliki koefisien 786,225.09 dengan p-value 0.0038 (signifikan). Variabel inflasi (INF) memiliki koefisien 564,779,664.76 dengan p-value 0.0172 (signifikan). Variabel suku bunga deposito (INT) memiliki koefisien -953,322,243.40 dengan p-value 0.0470 (signifikan). Variabel ekspor (EKS) p-value 0.4366 (tidak signifikan). Variabel kestabilan politik (POL) p-value 0.1705 (tidak signifikan). Variabel pengendalian korupsi (COC) p-value 0.0844 (tidak signifikan pada 5%).
 """
-)an 
- .
-
+)
