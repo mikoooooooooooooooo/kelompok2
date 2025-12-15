@@ -132,16 +132,6 @@ df_filtered = df[
 if not negara_kosong:
     df_filtered = df_filtered[df_filtered["Negara"].isin(negara_pick)].copy()
 
-# ------------------------------------------------------------
-# Tahun khusus untuk peta (ambil 1 tahun)
-# ------------------------------------------------------------
-st.divider()
-map_year = st.selectbox(
-    "Tahun untuk Peta Dunia",
-    options=list(range(year_range[0], year_range[1] + 1)),
-    index=(year_range[1] - year_range[0])  # default = tahun terakhir di rentang
-)
-
 # ============================================================
 # 3 TAB
 # ============================================================
@@ -187,19 +177,37 @@ with tab_line:
                 st.plotly_chart(fig, use_container_width=True)
 
 # ============================================================
-# TAB 2 — PETA DUNIA
+# TAB 2 — PETA ASEAN (bukan dunia)
 # ============================================================
 with tab_map:
-    st.subheader("Peta Dunia per Indikator (Highlight Negara Terpilih)")
+    st.subheader("Peta ASEAN per Indikator (Highlight Negara Terpilih)")
 
     # Kondisi hide: indikator kosong atau negara belum dipilih
     if indikator_kosong or negara_kosong:
-        st.info("Peta Dunia disembunyikan: pilih minimal 1 negara dan 1 indikator.")
+        st.info("Peta disembunyikan: pilih minimal 1 negara dan 1 indikator.")
     else:
-        # Ambil data pada tahun map_year saja
+        # ------------------------------------------------------------
+        # (OPSIONAL) Lengkapi ISO3 untuk negara ASEAN lain
+        # Agar aman kalau dataset kamu nambah negara
+        # ------------------------------------------------------------
+        ISO3_MAP.update({
+            "Singapore": "SGP",
+            "Brunei": "BRN",
+            "Brunei Darussalam": "BRN",
+            "Philippines": "PHL",
+            "Cambodia": "KHM",
+            "Lao PDR": "LAO",
+            "Laos": "LAO",
+            "Myanmar": "MMR",
+            "Timor-Leste": "TLS",
+            "East Timor": "TLS",
+        })
+
+        # Ambil tahun terakhir dari rentang filter
+        map_year = year_range[1]
         map_base = df[df["Tahun"] == map_year].copy()
 
-        # Ambil hanya negara yang dipilih supaya yang lain terlihat “abu-abu / tidak diwarnai”
+        # Ambil hanya negara yang dipilih
         map_sel = map_base[map_base["Negara"].isin(negara_pick)].copy()
 
         # Tambahkan kolom iso3 hasil mapping
@@ -208,13 +216,20 @@ with tab_map:
         # Buang baris yang iso3-nya tidak ada (tidak bisa dimapping)
         map_sel = map_sel.dropna(subset=["iso3"])
 
-        # Jika kosong, berarti mapping ISO3 belum lengkap / data tahun kosong
         if map_sel.empty:
             st.warning(
                 "Tidak ada negara yang bisa ditampilkan di peta.\n"
-                "Tambahkan nama negara ke ISO3_MAP atau cek ketersediaan data pada tahun tersebut."
+                "Pastikan nama negara di CSV cocok dengan ISO3_MAP."
             )
         else:
+            # ------------------------------------------------------------
+            # Batas wilayah ASEAN (perkiraan aman)
+            # lon: 92 s/d 142, lat: -15 s/d 25
+            # Ini meng-cover: Indonesia, Malaysia, Thailand, Vietnam, dll.
+            # ------------------------------------------------------------
+            ASEAN_LON_RANGE = [92, 142]
+            ASEAN_LAT_RANGE = [-15, 25]
+
             # Buat peta per indikator
             for ind in indikator_pick:
                 z_df = map_sel[["Negara", "iso3", ind]].dropna()
@@ -223,25 +238,34 @@ with tab_map:
                     st.info(f"Tidak ada data peta untuk {ind} pada tahun {map_year}.")
                     continue
 
-                # Choropleth: negara terpilih diwarnai berdasarkan nilai indikator
                 fig_map = px.choropleth(
                     z_df,
                     locations="iso3",
                     color=ind,
                     hover_name="Negara",
                     color_continuous_scale="Viridis",
-                    title=f"Peta {ind} (Tahun {map_year}) — hanya negara terpilih yang berwarna"
+                    title=f"Peta ASEAN — {ind} (Tahun {map_year})"
                 )
 
-                # Rapikan tampilan globe
+                # ------------------------------------------------------------
+                # Kunci viewport agar fokus ASEAN (bukan world)
+                # ------------------------------------------------------------
                 fig_map.update_geos(
+                    projection_type="mercator",
                     showframe=False,
                     showcoastlines=True,
-                    projection_type="natural earth"
+                    lonaxis_range=ASEAN_LON_RANGE,
+                    lataxis_range=ASEAN_LAT_RANGE,
+                    fitbounds=False  # jangan auto-fit ke dunia
                 )
 
-                fig_map.update_layout(height=520)
+                fig_map.update_layout(
+                    height=520,
+                    margin=dict(l=10, r=10, t=60, b=10)
+                )
+
                 st.plotly_chart(fig_map, use_container_width=True)
+
 
 # ============================================================
 # TAB 3 — TABEL DATA + DOWNLOAD
@@ -296,4 +320,4 @@ with tab_table:
         )
 
 st.divider()
-st.caption("Sumber data: data/data.csv")
+st.caption("Sumber data: World Bank")
