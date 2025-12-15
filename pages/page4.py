@@ -1,17 +1,3 @@
-# pages/page4.py
-# ============================================================
-# PAGE 4 — Data World Bank (MixX)
-# Fitur:
-# 1) Filter negara, rentang tahun, indikator
-# 2) 3 tab:
-#    - Chart Line
-#    - Peta Dunia
-#    - Tabel Data + download CSV & Excel
-# Catatan:
-# - File CSV berada di folder: data/data.csv
-# - Jika indikator kosong -> chart line & peta tidak ditampilkan (hide)
-# ============================================================
-
 import os
 import io
 import pandas as pd
@@ -21,17 +7,16 @@ import plotly.express as px
 # ------------------------------------------------------------
 # Konfigurasi halaman (judul & layout)
 # ------------------------------------------------------------
-st.set_page_config(page_title="Data World Bank (MixX)", layout="wide")
-st.title("Data World Bank (MixX) — Visualisasi CSV")
+st.set_page_config(page_title="Data World Bank", layout="wide")
+st.title("Visualisasi Data")
 
 # ------------------------------------------------------------
-# Daftar indikator yang tersedia di sistem (sesuaikan jika berubah)
+# Daftar indikator yang tersedia di sistem
 # ------------------------------------------------------------
 INDICATORS = ["FDI", "GDP", "EXC", "INF", "EKS", "INT", "POL", "COC"]
 
 # ------------------------------------------------------------
 # Mapping nama negara -> kode ISO3 untuk Plotly choropleth
-# (Tambahkan jika dataset kamu punya negara lain)
 # ------------------------------------------------------------
 ISO3_MAP = {
     "Indonesia": "IDN",
