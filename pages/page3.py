@@ -1,5 +1,4 @@
 import streamlit as st
 
 st.title("Selamat Datang di Halaman Utama Kelompok 2")
-st.write("This page allows you to customize your preferences.")
-
+st.write("This updated only to push commit.")
