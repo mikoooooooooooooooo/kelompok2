@@ -13,7 +13,7 @@ Bagi Investor Asing
 Investor asing diharapkan dapat menjadikan indikator makroekonomi seperti GDP per kapita, stabilitas nilai tukar, inflasi, dan suku bunga sebagai pertimbangan utama dalam mengambil keputusan investasi di kawasan ASEAN. Meskipun faktor politik dan institusional tidak terbukti signifikan secara statistik dalam penelitian ini, investor tetap perlu mempertimbangkannya sebagai faktor risiko jangka panjang.
 
 Bagi Peneliti Selanjutnya
-Penelitian selanjutnya disarankan untuk menambahkan variabel lain yang berpotensi memengaruhi FDI, seperti keterbukaan perdagangan, kualitas infrastruktur, tingkat pendidikan tenaga kerja, kebijakan pajak, atau indeks kemudahan berusaha. Selain itu, penggunaan periode waktu yang lebih panjang, metode estimasi alternatif, atau pemisahan analisis per negara dapat memberikan pemahaman yang lebih mendalam mengenai determinan FDI di kawasan ASEAN.""")
+Penelitian selanjutnya disarankan untuk menambahkan variabel lain yang berpotensi memengaruhi FDI, seperti keterbukaan perdagangan, kualitas infrastruktur, tingkat pendidikan tenaga kerja, kebijakan pajak, atau indeks kemudahan berusaha. Selain itu, penggunaan periode waktu yang lebih panjang, metode estimasi alternatif, atau pemisahan analisis per negara dapat memberikan pemahaman yang lebih mendalam mengenai determinan FDI di kawasan ASEAN.
 
 Bagi Pengembangan Kebijakan Regional ASEAN
-ASEAN sebagai kawasan ekonomi regional diharapkan dapat meningkatkan kerja sama dalam menciptakan iklim investasi yang lebih terintegrasi, transparan, dan stabil guna meningkatkan daya saing kawasan dalam menarik FDI di tengah persaingan global."
+ASEAN sebagai kawasan ekonomi regional diharapkan dapat meningkatkan kerja sama dalam menciptakan iklim investasi yang lebih terintegrasi, transparan, dan stabil guna meningkatkan daya saing kawasan dalam menarik FDI di tengah persaingan global.""")
