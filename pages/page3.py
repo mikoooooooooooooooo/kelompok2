@@ -48,7 +48,7 @@ st.markdown(
     <div style="text-align: justify;">
     <b>Saran:</b>
 
-    <br><br><b>Bagi Pemerintah dan Pembuat Kebijakan</b><br>
+    <br><b>Bagi Pemerintah dan Pembuat Kebijakan</b><br>
     Pemerintah di negara-negara ASEAN, khususnya Indonesia, Malaysia, Thailand,
     dan Vietnam, perlu memprioritaskan kebijakan yang mendorong pertumbuhan
     ekonomi berkelanjutan dan peningkatan GDP per kapita, karena terbukti menjadi
