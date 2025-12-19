@@ -1,7 +1,9 @@
-import streamlit as st
+import streamlit as st  # import modul Streamlit untuk web app
 
-st.subheader("KESIMPULAN DAN SARAN")
+# Menampilkan subheader untuk bagian akhir laporan
+st.subheader("Kesimpulan dan Saran")
 
+# Blok markdown pertama berisi isi kesimpulan dalam format HTML justify
 st.markdown(
     """
     <div style="text-align: justify;">
@@ -43,6 +45,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Blok markdown kedua: saran/rekomendasi penelitian
 st.markdown(
     """
     <div style="text-align: justify;">
@@ -83,4 +86,4 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True
-)
+) # agar HTML tag <br> dan CSS justify bisa aktif

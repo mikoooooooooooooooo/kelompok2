@@ -8,7 +8,7 @@ import streamlit.components.v1 as components  # Untuk render HTML/CSS kompleks
 # ======================================================
 # JUDUL HALAMAN
 # ======================================================
-st.title("Isi Pembahasan")
+st.subheader("Isi Pembahasan")
 
 # ======================================================
 # PARAGRAF PEMBUKA (HASIL DAN PEMBAHASAN)

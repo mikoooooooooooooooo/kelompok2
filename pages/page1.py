@@ -1,6 +1,9 @@
-import streamlit as st
+import streamlit as st # import modul Streamlit untuk membuat web app
 
+# Judul utama halaman
 st.title("Determinasi Investasi Asing Langsung di 4 (Empat) Negara ASEAN")
+
+# Menampilkan nama anggota kelompok menggunakan st.write
 st.write("""Kelompok 2:
 1. Jesica Octavia Simamora (021002414002)
 2. Muhammad Hary Prasetyo Wahyu Jatmiko (021002414004)
@@ -8,8 +11,10 @@ st.write("""Kelompok 2:
 4. Chika Ristysuatantri (021002201016)
     """)
 
+# Subjudul bagian pendahuluan
 st.subheader("Pendahuluan")
 
+# Menampilkan paragraf panjang dengan HTML agar justify bisa digunakan
 st.markdown("""
     <div style="text-align: justify;">
     <p>Investasi Asing Langsung (FDI) memainkan peran yang sangat penting dalam perekonomian negara berkembang, khususnya di kawasan Asia Tenggara. FDI tidak hanya memberikan kontribusi terhadap pembentukan modal tetap dan penciptaan lapangan pekerjaan, tetapi juga berperan dalam transfer teknologi, peningkatan keterampilan tenaga kerja, serta integrasi ekonomi global. Negara-negara ASEAN, termasuk Indonesia, Malaysia, Thailand, dan Vietnam, telah menjadi tujuan utama bagi investor asing karena potensi pasar yang besar, biaya tenaga kerja yang relatif lebih rendah, dan posisi geografis yang strategis di kawasan Asia. Namun, meskipun kawasan ini menawarkan berbagai peluang investasi, aliran FDI tetap dipengaruhi oleh berbagai faktor makroekonomi dan non-ekonomi.
@@ -27,9 +32,11 @@ st.markdown("""
     """,
     unsafe_allow_html=True
 )
-    
+
+# Subjudul Metode Penelitian
 st.subheader("Metode Penelitian")
 
+# Penjelasan mengenai pendekatan penelitian secara justify paragraf
 st.markdown("""
     <div style="text-align: justify;">
     <p>Penelitian ini menggunakan pendekatan kuantitatif dengan desain penelitian Klausal-komparatif. Kausal-komparatif digunakan untuk menjelaskan hubungan sebab-akibat antar variabel, meskipun tanpa manipulasi variabel secara langsung (non-eksperimen). Penelitian ini berupaya melihat apakah perubahan pada variabel-variabel seperti GDP atau suku bunga menyebabkan perubahan pada FDI. Penelitian ini bertujuan untuk menguji pengaruh beberapa variabel makroekonomi dan politik terhadap Investasi Asing Langsung (FDI) di empat negara ASEAN (Indonesia, Malaysia, Thailand, dan Vietnam) pada periode 2004-2023. Penelitian ini menggunakan metode regresi data panel, yang memungkinkan untuk menganalisis data yang mempunyai dimensi waktu (time series) serta dimensi antar negara (cross-section) secara bersamaan.
@@ -37,6 +44,8 @@ st.markdown("""
     """,
     unsafe_allow_html=True
 )   
+
+# Penjelasan lanjutan terkait variabel dependen & independen
 st.markdown("""
     <div style="text-align: justify;">    
     <p>Penelitian ini menggunakan satu variabel dependen dan tujuh variabel independen, yang dijelaskan sebagai berikut:
@@ -45,6 +54,7 @@ st.markdown("""
     unsafe_allow_html=True
 )  
 
+# Daftar variabel penelitian ditulis dengan markdown HTML
 st.markdown("""
     <div style="text-align: justify;">
     
@@ -68,14 +78,15 @@ st.markdown("""
     unsafe_allow_html=True
 ) 
 
+# Paragraf penjelasan data panel World Bank
 st.markdown("""
     <div style="text-align: justify;">
     <p>Dengan menggunakan Eviews sebagai alat bantu statistik, model regresi data panel dapat dianalisis untuk menguji hipotesis penelitian tentang pengaruh faktor ekonomi dan politik terhadap aliran FDI di negara-negara ASEAN.
 Model regresi data panel yang digunakan dalam penelitian ini adalah sebagai berikut:
      
-     </div>
     """,unsafe_allow_html=True) 
 
+# Menampilkan formula regresi panel menggunakan LaTeX
 st.latex(r'''
 FDI_{it} = \alpha 
 + \beta_1 GDP_{it}
@@ -86,8 +97,9 @@ FDI_{it} = \alpha
 + \beta_6 POL_{it}
 + \beta_7 COC_{it}
 + \varepsilon
-''')
+''')  # st.latex akan merender rumus matematis
 
+# Penjelasan definisi masing-masing variabel dan notasi matematis
 st.markdown("""
 <div style="text-align: justify;">
 Dimana:
@@ -118,6 +130,5 @@ Dimana:
 
 <p>t		= Banyaknya data time series (2004-2023)
 
-    </div>
     """,unsafe_allow_html=True
            )
