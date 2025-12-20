@@ -75,7 +75,7 @@ html = f"""
 /* Warna dan font global */
 body {{
   font-family: Arial, sans-serif;
-  background: transparent;
+  background: transparent;          
   color: #ffffff;
 }}
 
@@ -85,7 +85,7 @@ body {{
   margin: auto;
   padding: 16px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.03);
+  background: #C0C0C0;          
   border: 1px solid rgba(255,255,255,0.12);
 }}
 
