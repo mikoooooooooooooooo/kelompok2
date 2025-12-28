@@ -72,7 +72,7 @@ html = f"""
 <html>
 <head>
 <style>
-/* Warna dan font global */
+/* Warna dan font */
 body {{
   font-family: Arial, sans-serif;
   background: transparent;          
@@ -85,7 +85,7 @@ body {{
   margin: auto;
   padding: 16px;
   border-radius: 12px;
-  background: #C0C0C0;          
+  background: #00008b;          
   border: 1px solid rgba(255,255,255,0.12);
 }}
 
@@ -125,7 +125,7 @@ th {{
   margin-top: 10px;
   font-size: 12px;
   text-align: right;
-  color: #cccccc;
+  color: #ffffff;
 }}
 </style>
 </head>
@@ -261,7 +261,7 @@ body {{
   margin: auto;
   padding: 16px 18px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.03);
+  background: #00008b;          
   border: 1px solid rgba(255,255,255,0.12);
 }}
 
@@ -300,7 +300,7 @@ tfoot td {{
   margin-top: 10px;
   font-size: 12px;
   text-align: right;
-  color: #cccccc;
+  color: #ffffff;
 }}
 </style>
 </head>

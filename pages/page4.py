@@ -318,6 +318,43 @@ with tab_table:
             file_name="data_terfilter.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
+        st.divider()
+        st.subheader("Langkah-langkah mendapatkan data pada web World Bank")
+
+# --- Langkah 1 & 2 ---
+        st.markdown(
+    """
+<div style="text-align: left; font-size:16px;">
+
+1) Buka website  
+<a href="https://data.worldbank.org/indicator/" target="_blank" style="color:#1a0dab; text-decoration:underline;"> https://data.worldbank.org/indicator/
+</a>
+
+2) Pada bilah pencarian (search bar) ketik nama negara (indonesia/viet nam/thailand/malaysia) dan indikator yang ingin dipilih.
+
+</div>
+""",
+    unsafe_allow_html=True
+)
+
+# --- Gambar untuk poin 2 (folder data) ---
+        st.image("data/2.jpg", caption="Tampilan pencarian indikator di website World Bank", use_column_width=True)
+
+
+# --- Langkah 3 ---
+        st.markdown(
+    """
+<div style="text-align: left; font-size:16px;">
+
+3) Kemudian pada bagian **Download** pilih **XML / CSV / EXCEL**, ini akan mengunduh seluruh data pada indikator tersebut untuk seluruh negara di dunia dari tahun 1960 sampai tahun terbaru (2024).
+
+</div>
+""",
+    unsafe_allow_html=True
+)
+
+# --- Gambar untuk poin 3 (folder data) ---
+        st.image("data/3.jpg", caption="Contoh menu Download data indikator World Bank", use_column_width=True)
 
 st.divider()
 st.caption("Sumber data: World Bank")
